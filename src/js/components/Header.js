@@ -1,10 +1,12 @@
 import React from "react";
 
+import Nav from "./Nav";
+
 export default class Header extends React.Component {
   render() {
     return (
       <header className="header">
-          This is my header
+          <Nav />
       </header>
     );
   }

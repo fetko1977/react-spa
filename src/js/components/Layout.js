@@ -12,6 +12,7 @@ export default class Layout extends React.Component {
     return (
       <div className="app-wrapper">
         <Header />
+        
         <Footer />
       </div>
     );
