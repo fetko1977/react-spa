@@ -1,6 +1,6 @@
 import React from "react";
-import PostsStore from "../stores/PostsStore";
-import Post from "./Post"
+import PostsStore from "../../stores/PostsStore";
+import Post from "./Post";
 
 export default class Posts extends React.Component {
   constructor() {
@@ -17,7 +17,7 @@ export default class Posts extends React.Component {
             color: '#333',
             listStyle: 'none'
         }
-    } 
+    }
 
     const PostsItems = this.state.posts.map((post) => {
       return <Post key={post.id} {...post} />

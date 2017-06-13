@@ -21,6 +21,42 @@ class PostsStore extends EventEmitter {
         });
     }
 
+    getSinglePost(postId){
+        const url = 'https://jsonplaceholder.typicode.com/posts/' + postId;
+        return axios.get(url)
+        .then((response) => {
+            return response.data;
+        })
+        .catch(function (error) {
+            //console.log(error);
+            return error;
+        });  
+    }
+    
+    getPostAuthor(postId){
+        const url = 'https://jsonplaceholder.typicode.com/users/' + postId;
+        return axios.get(url)
+        .then((response) => {
+            return response.data
+        })
+        .catch(function (error) {
+            //console.log(error);
+            return error
+        });
+    }
+
+    getPostComments(postId){
+        const url = 'https://jsonplaceholder.typicode.com/posts/' + postId + '/comments';
+        return axios.get(url)
+        .then((response) => {
+            return response.data;
+        })
+        .catch(function (error) {
+            //console.log(error);
+            return error;
+        });
+    }
+
     getPosts(){
         return this.posts;
     }

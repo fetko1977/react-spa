@@ -4,8 +4,9 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Posts from "../pages/Posts";
-import SinglePost from "../pages/SinglePost";
+import Home from "../pages/Home/Home";
+import Posts from "../pages/Posts/Posts";
+import SinglePost from "../pages/Posts/SinglePost";
 
 export default class Main extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ export default class Main extends React.Component {
           <div className="container">
               <div className="row">
                   <Switch>
+                      <Route exact path='/' component={Home}/>
                       <Route exact path='/posts' component={Posts}/>
                       <Route path='/posts/:number' component={SinglePost}/>
                   </Switch>
