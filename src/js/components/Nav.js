@@ -37,6 +37,9 @@ export default class Nav extends React.Component {
                         <Link to={"/"} onClick={this.toggleCollapse.bind(this)}><i class="fa fa-home" aria-hidden="true"></i> Home</Link>
                     </li>
                     <li>
+                        <Link to={"/users"} onClick={this.toggleCollapse.bind(this)}><i class="fa fa-users" aria-hidden="true"></i> Users</Link>
+                    </li>
+                    <li>
                         <Link to={"/posts"} onClick={this.toggleCollapse.bind(this)}><i class="fa fa-clipboard" aria-hidden="true"></i> Posts</Link>
                     </li>
                 </ul>

@@ -7,6 +7,7 @@ import {
 import Home from "../pages/Home/Home";
 import Posts from "../pages/Posts/Posts";
 import SinglePost from "../pages/Posts/SinglePost";
+import Users from "../pages/Users/Users";
 
 export default class Main extends React.Component {
   constructor() {
@@ -27,6 +28,7 @@ export default class Main extends React.Component {
                       <Route exact path='/' component={Home}/>
                       <Route exact path='/posts' component={Posts}/>
                       <Route path='/posts/:number' component={SinglePost}/>
+                      <Route exact path='/users' component={Users}/>
                   </Switch>
               </div>
           </div>
